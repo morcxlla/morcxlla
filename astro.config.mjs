@@ -9,7 +9,8 @@ import '@fontsource-variable/onest';
 export default defineConfig({
   integrations: [tailwind()],
   redirects: {
-    '/ai-album': 'http://www.ai-album.art',
+    '/ai-album': 'https://www.ai-album.art',
+    '/blacklist': 'https://blacklist.morcxlla.xyz',
     '/foe': 'https://discord.gg/grZbJUsF3K',
   },
 });
