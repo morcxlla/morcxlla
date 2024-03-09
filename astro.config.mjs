@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import { redirects } from '@/data/config.js'
 
 import tailwind from "@astrojs/tailwind";
 
