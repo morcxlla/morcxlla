@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+import Socialnav from '../components/Socialnav.astro'
+import { config, theme } from '../config.js'
+---
+
+<Layout title="Enye">
+
+	<div class="h-dvh flex flex-col justify-between items-center">
+		<Nav page="enye"/>
+
+		<main class="flex flex-col">
+
+			<h1 class="text-9xl font-black">
+				<a class="p-12"
+					href="https://youtu.be/GWCldYPEsl4"
+					target="_blank"
+				>
+					Ñ
+				</a>
+			</h1>
+
+		</main>
+
+		<div class="w-full">
+			<Footer/>
+		</div>
+
+	</div>
+
+</Layout>
