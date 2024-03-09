@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Nav from '../../components/Nav.astro'
+import Footer from '../../components/Footer.astro'
+import { config } from '../../config.js'
+---
+
+<Layout title="Welcome to Astro.">
+
+	<div class="h-dvh flex flex-col items-center justify-between">
+		<Nav page="utilities"/>
+
+		<div class="md:mt-auto mb-4 w-96 p-3 bg-yellow-500/50 border-2 border-yellow-500 rounded-md text-center underline font-black text-lg">
+			Not Working
+		</div>
+
+		<main class="mb-auto grid grid-cols-8 gap-1 p-3 shadow-xl w-96 backdrop-blur border-2 border-primary rounded-md">
+
+			<input class="col-span-4 px-2 py-0.5 rounded focus:outline-none shadow-inner"
+				type="text" placeholder="Prefijo"
+			>
+
+			<input class="col-span-4 px-2 py-0.5 rounded focus:outline-none shadow-inner"
+				type="text" placeholder="Sufijo"
+			>
+
+			<select class="col-span-full bg-white px-2 py-0.5 rounded focus:outline-none shadow-inner"
+				name="cars" id="cars"
+			>
+				<option selected>Longitud</option>
+				<option value="">1 fragmento (xxxxxxxx)</option>
+				<option value="">2 fragmentos (xxxxxxxx-xxxxxxxx)</option>
+				<option value="">3 fragmentos (xxxxxxxx-xxxxxxxx-xxxxxxxx)</option>
+				<option value="">4 fragmentos (xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx)</option>
+			</select>
+
+			<input class="col-span-2 px-2 py-0.5 rounded focus:outline-none shadow-inner placeholder:text-sm"
+				type="number" placeholder="Cantidad"
+				min="1" max="8"
+			>
+
+			<select class="col-span-2 bg-white px-2 py-0.5 rounded focus:outline-none shadow-inner text-sm"
+				name="cars" id="cars"
+			>
+				<option selected>Guiones</option>
+				<option value="">Si</option>
+				<option value="">No</option>
+			</select>
+
+			<button class="col-span-4 px-2 py-0.5 rounded focus:outline-none shadow-inner active:translate-y-px hover:bg-primary">
+				Generar
+			</button>
+
+			<section class="col-span-full mt-3 flex flex-col gap-1 p-3 shadow-xl backdrop-blur border-2 border-primary rounded-md">
+				
+				<div class="flex gap-x-3 items-center justify-between">
+
+					<p class="w-full align- select-all bg-[#fff] px-2 py-0.5 rounded focus:outline-none shadow-inner">
+						xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx
+					</p>
+					<button>
+						<svg class="size-4" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+						</svg>
+					</button>
+
+				</div>
+								<div class="flex gap-x-3 items-center justify-between">
+
+					<p class="w-full select-all bg-[#fff] px-2 py-0.5 rounded focus:outline-none shadow-inner">
+						xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx
+					</p>
+					<button>
+						<svg class="size-4" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+						</svg>
+					</button>
+
+				</div>
+								<div class="flex gap-x-3 items-center justify-between">
+
+					<p class="w-full select-all bg-[#fff] px-2 py-0.5 rounded focus:outline-none shadow-inner">
+						xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx
+					</p>
+					<button>
+						<svg class="size-4" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+						</svg>
+					</button>
+
+				</div>
+	
+			</section>
+
+		</main>
+
+		<Footer/>
+	</div>
+
+</Layout>

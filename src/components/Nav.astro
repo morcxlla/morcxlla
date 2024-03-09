@@ -1,0 +1,35 @@
+---
+import { config } from '../config.js'
+
+interface Props {
+	page: string;
+}
+
+const { page } = Astro.props;
+---
+<header class="w-full flex justify-between items-center py-8 select-none">
+  <p class="hover:underline select-text">
+    <a href={`mailto:${config.mail}`}>
+      {config.mail}
+    </a>
+  </p>
+  <nav class="flex gap-x-3 font-bold">
+    <p class={`hover:underline ${page === 'home' ? 'underline decoration-dashed' : ''}`}>
+      <a href="/">
+        Home
+      </a>
+    </p>
+    <div class="font-light" aria-hidden="true">/</div>
+    <p class={`hover:underline ${page === 'utilities' ? 'underline decoration-dashed' : ''}`}>
+      <a href="/utilities">
+        Utilities
+      </a>
+    </p>
+    <!-- <div class="font-light">/</div>
+    <p>
+      <a href="">
+        Post
+      </a>
+    </p> -->
+  </nav>
+</header>

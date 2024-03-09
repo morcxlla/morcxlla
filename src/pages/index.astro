@@ -1,10 +1,31 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+import Socialnav from '../components/Socialnav.astro'
+import { config, theme } from '../config.js'
 ---
 
 <Layout title="Welcome to Astro.">
+
+	<Nav page="home"/>
+
 	<main>
+		<h1 class={theme.h1}>Morcxlla</h1>
+		<p class="max-w-[70ch]">
+
+		</p>
+
+		<Socialnav/>
 
 	</main>
+
+	<section id="projects">
+		<h2 class={theme.h2}>Projects</h2>
+		
+	</section>
+
+	<div class="h-[200dvh]"></div>
+	<Footer/>
+
 </Layout>
