@@ -10,5 +10,6 @@ export default defineConfig({
   integrations: [tailwind()],
   redirects: {
     '/ai-album': 'http://www.ai-album.art',
+    '/foe': 'https://discord.gg/grZbJUsF3K',
   },
 });
