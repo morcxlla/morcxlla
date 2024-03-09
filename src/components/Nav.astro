@@ -1,5 +1,6 @@
 ---
-import { config } from '../config.js'
+import NavDivider from '@/components/NavDivider.astro'
+import { config } from '@/config.js'
 
 interface Props {
 	page: string;
@@ -14,28 +15,57 @@ const { page } = Astro.props;
     </a>
   </p>
   <nav class="flex gap-x-3 font-bold">
+
     <p class={`hover:underline ${page === 'home' ? 'underline decoration-dashed' : ''}`}>
       <a href="/">
         Home
       </a>
     </p>
-    <div class="font-light">/</div>
+
+    <NavDivider/>
+
     <p class={`hover:underline ${page === 'projects' ? 'underline decoration-dashed' : ''}`}>
       <a href="/projects">
         Projects
       </a>
     </p>
-    <div class="font-light" aria-hidden="true">/</div>
-    <p class={`hover:underline ${page === 'utilities' ? 'underline decoration-dashed' : ''}`}>
-      <a href="/utilities">
-        Utilities
-      </a>
-    </p>
-    <div class="font-light" aria-hidden="true">/</div>
+
+    <NavDivider/>
+
+    <div class="dropdown dropdown-hover">
+      <p class={`hover:underline ${page === 'enye' ? 'underline decoration-dashed' : ''}`}
+        role="button"
+      >
+        <a href="/utilities/passgen">
+          Utilities
+        </a>
+      </p>
+      <ul tabindex="0" class="dropdown-content z-[1] menu shadow bg-base-100 rounded-box">
+        <li>
+          <a href="/utilities/passgen" target="_blank">
+            Passgen
+          </a>
+        </li>
+        <li>
+          <a href="/utilities/superlink" target="_blank">
+            SuperLink
+          </a>
+        </li>
+        <li>
+          <a href="/utilities/vault" target="_blank">
+            Vault
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <NavDivider/>
+
     <p class={`hover:underline ${page === 'enye' ? 'underline decoration-dashed' : ''}`}>
       <a href="/enye">
         Enye
       </a>
     </p>
+
   </nav>
 </header>
