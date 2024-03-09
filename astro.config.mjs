@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { social } from '../data/config.js'
 
 import tailwind from "@astrojs/tailwind";
 
@@ -10,8 +11,11 @@ import '@fontsource-variable/onest';
 export default defineConfig({
   integrations: [tailwind()],
   redirects: {
-    '/ai-album': 'http://www.ai-album.art',
-    // Agrega más redirecciones según tus necesidades
+    '/ai-album'{
+      to: 'http://www.ai-album.art',
+      target: '_blank'
+    }
+
   }
 });
 
