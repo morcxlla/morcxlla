@@ -19,17 +19,23 @@ const { page } = Astro.props;
         Home
       </a>
     </p>
+    <div class="font-light">/</div>
+    <p class={`hover:underline ${page === 'projects' ? 'underline decoration-dashed' : ''}`}>
+      <a href="/projects">
+        Projects
+      </a>
+    </p>
     <div class="font-light" aria-hidden="true">/</div>
     <p class={`hover:underline ${page === 'utilities' ? 'underline decoration-dashed' : ''}`}>
       <a href="/utilities">
         Utilities
       </a>
     </p>
-    <!-- <div class="font-light">/</div>
-    <p>
-      <a href="">
-        Post
+    <div class="font-light" aria-hidden="true">/</div>
+    <p class={`hover:underline ${page === 'eny' ? 'underline decoration-dashed' : ''}`}>
+      <a href="/enye">
+        Enye
       </a>
-    </p> -->
+    </p>
   </nav>
 </header>
