@@ -1,6 +1,6 @@
 ---
 import NavDivider from '@/components/NavDivider.astro'
-import { config } from '@/config.js'
+import { config } from '@/data/config.js'
 
 interface Props {
 	page: string;
@@ -33,7 +33,7 @@ const { page } = Astro.props;
     <NavDivider/>
 
     <div class="dropdown dropdown-hover">
-      <p class={`hover:underline ${page === 'enye' ? 'underline decoration-dashed' : ''}`}
+      <p class={`hover:underline ${page === 'utilities' ? 'underline decoration-dashed' : ''}`}
         role="button"
       >
         <a href="/utilities/passgen">
@@ -42,17 +42,17 @@ const { page } = Astro.props;
       </p>
       <ul tabindex="0" class="dropdown-content z-[1] menu shadow bg-base-100 rounded-box">
         <li>
-          <a href="/utilities/passgen" target="_blank">
+          <a href="/utilities/passgen">
             Passgen
           </a>
         </li>
         <li>
-          <a href="/utilities/superlink" target="_blank">
+          <a href="/utilities/superlink">
             SuperLink
           </a>
         </li>
         <li>
-          <a href="/utilities/vault" target="_blank">
+          <a href="/utilities/vault">
             Vault
           </a>
         </li>
@@ -68,4 +68,4 @@ const { page } = Astro.props;
     </p>
 
   </nav>
-</header>
+</header>@/data/config
