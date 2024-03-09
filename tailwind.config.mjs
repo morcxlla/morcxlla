@@ -14,4 +14,11 @@ export default {
 	plugins: [
 		require("daisyui")
 	],
+
+	daisyui: {
+		themes: ["cmyk"],
+		base: false,
+    styled: true,
+		utils: false,
+  },
 }
