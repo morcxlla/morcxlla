@@ -19,6 +19,6 @@ export default {
 		themes: ["cmyk"],
 		base: false,
     styled: true,
-		utils: false,
+		utils: true,
   },
 }
