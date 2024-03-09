@@ -6,11 +6,12 @@ import Socialnav from '../components/Socialnav.astro'
 import { config, theme } from '../config.js'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Home">
 
 	<Nav page="home"/>
 
 	<main>
+		
 		<h1 class={theme.h1}>Morcxlla</h1>
 		<p class="max-w-[70ch]">
 
@@ -20,12 +21,6 @@ import { config, theme } from '../config.js'
 
 	</main>
 
-	<section id="projects">
-		<h2 class={theme.h2}>Projects</h2>
-		
-	</section>
-
-	<div class="h-[200dvh]"></div>
 	<Footer/>
 
 </Layout>
