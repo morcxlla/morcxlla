@@ -1,0 +1,72 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Nav from '@/components/Nav.astro'
+import Footer from '@/components/Footer.astro'
+
+import { theme } from '@/data/config.js'
+import { commands } from '@/data/ark-commands.js'
+
+---
+
+<Layout title="ARK INI">
+
+	<Nav page="projects"/>
+
+	<main>
+		
+		<div class="flex flex-col md:flex-row justify-between items-center">
+			<h1 class={theme.h1}>Ark Survival Ascended Fake INI</h1>
+			<img src="" alt="">
+		</div>
+
+		<ul class="space-y-7 mt-12">
+			{commands.map((com)=> 
+				<li class="space-y-1">
+					<div class="flex items-center justify-between py-2 px-3 rounded-lg shadow border border-[#d1d1d1] bg-[#ddd]">
+
+						<code class="select-all">
+							<span class="text-rose-600">
+								{com.command}
+							</span>
+							<span class="text-purple-600">
+								{com.value}
+							</span>
+						</code>
+
+						{/*
+							<button class="active:-95 over:text-emerald-600 hover:scale-110 transition">
+								<svg class="size-5" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+								</svg>
+							</button>
+						*/}
+
+					</div>
+
+					<div class="flex px-2">
+						{com.description &&
+							<p class="text-balance text-sm">
+								{com.description}
+							</p>
+						}	
+						{com.recomended 
+							? 
+							<p class="ml-auto font-medium text-green-500">
+								RECOMENDADO
+							</p>
+							:
+							<p class="ml-auto font-medium whitespace-nowrap text-red-500">
+								NO RECOMENDADO
+							</p>
+						}
+
+					</div>
+				</li>
+			)}
+		</ul>
+		
+	</main>
+
+	<Footer/>
+
+</Layout>
