@@ -13,9 +13,25 @@ import { theme } from '@/data/config.js'
 	<main>
 		<h1 class={theme.h1}>Projects</h1>
 
+		<!-- Temporal List -->
+		<ul class="mt-12">
+			<li>
+				<a href="/ai-album" target="_blank">AI-Album</a>
+			</li>
+			<li>
+				<a href="/ark-ini">Ark INI</a>
+			</li>
+		</ul>
+
 
 	</main>
 
 	<Footer/>
 
 </Layout>
+
+<style>
+	a {
+		@apply text-emerald-600 font-medium hover:underline ;
+	}
+</style>

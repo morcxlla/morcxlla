@@ -13,3 +13,7 @@ export const theme = {
   h2: 'text-3xl font-extrabold',
   h3: 'text-2xl font-bold',
 }
+
+export const arkIniCommands = {
+
+}
