@@ -8,12 +8,8 @@ interface Props {
 
 const { page } = Astro.props;
 ---
-<header class="w-full flex justify-between items-center py-8 mb-8 select-none">
-  <p class="hover:underline select-text">
-    <a href={`mailto:${config.mail}`}>
-      {config.mail}
-    </a>
-  </p>
+<header class="w-full flex flex-row-reverse justify-between items-center py-8 mb-8 select-none">
+
   <nav class="flex gap-x-3 font-bold">
 
     <p class={`hover:underline ${page === 'home' ? 'underline decoration-dashed' : ''}`}>
@@ -47,13 +43,8 @@ const { page } = Astro.props;
           </a>
         </li>
         <li>
-          <a href="/utilities/superlink">
-            SuperLink
-          </a>
-        </li>
-        <li>
-          <a href="/utilities/vault">
-            Vault
+          <a href="/utilities/ark-ini">
+            Ark ini
           </a>
         </li>
       </ul>
@@ -68,4 +59,7 @@ const { page } = Astro.props;
     </p>
 
   </nav>
+
+  <slot/>
+
 </header>
