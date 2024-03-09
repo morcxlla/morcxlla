@@ -1,6 +1,5 @@
 export const config = {
-  mail: 'contact@mail.com',
-  
+  mail: 'morcxlla@gmail.com',
 }
 
 export const social = {
