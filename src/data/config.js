@@ -13,9 +13,3 @@ export const theme = {
   h2: 'text-3xl font-extrabold',
   h3: 'text-2xl font-bold',
 }
-
-export const redirects = {  
-  '/ai-album': {
-    to: 'http://www.ai-album.art',
-  },
-}
