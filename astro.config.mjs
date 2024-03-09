@@ -9,8 +9,6 @@ import '@fontsource-variable/onest';
 export default defineConfig({
   integrations: [tailwind()],
   redirects: {
-    '/ai-album': {
-      to: 'http://www.ai-album.art',
-    },
+    '/ai-album': 'http://www.ai-album.art',
   },
 });
