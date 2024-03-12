@@ -4,13 +4,23 @@ import Nav from '@/components/Nav.astro'
 import Footer from '@/components/Footer.astro'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="PassGen">
 
 	<div class="h-dvh flex flex-col items-center justify-between">
 		<Nav page="utilities"/>
 
-		<div class="md:mt-auto mb-4 w-96 p-3 bg-yellow-500/50 border-2 border-yellow-500 rounded-md text-center underline font-black text-lg">
-			Not Working Yet
+		<div class="md:mt-auto mb-4 w-96 p-3 bg-yellow-500/50 border-2 border-yellow-500 rounded-md text-center">
+			<p class="font-black text-lg">
+				Not Working Yet
+			</p>
+			<p>
+				<a class="text-sm underline hover:text-[#999]"
+					href="https://github.com/morcxlla/morcxlla/blob/master/src/pages/utilities/passgen.astro"
+					target="_blank"
+				>
+					Make Code
+				</a>
+			</p>
 		</div>
 
 		<main class="mb-auto grid grid-cols-8 gap-1 p-3 shadow-xl w-96 backdrop-blur border-2 border-primary rounded-md">
@@ -26,7 +36,7 @@ import Footer from '@/components/Footer.astro'
 			<select class="col-span-full bg-white px-2 py-0.5 rounded focus:outline-none shadow-inner"
 				name="cars" id="cars"
 			>
-				<option selected>Longitud</option>
+				<option selected disabled>Longitud</option>
 				<option value="">1 fragmento (xxxxxxxx)</option>
 				<option value="">2 fragmentos (xxxxxxxx-xxxxxxxx)</option>
 				<option value="">3 fragmentos (xxxxxxxx-xxxxxxxx-xxxxxxxx)</option>
@@ -36,12 +46,13 @@ import Footer from '@/components/Footer.astro'
 			<input class="col-span-2 px-2 py-0.5 rounded focus:outline-none shadow-inner placeholder:text-sm"
 				type="number" placeholder="Cantidad"
 				min="1" max="8"
+				required
 			>
 
 			<select class="col-span-2 bg-white px-2 py-0.5 rounded focus:outline-none shadow-inner text-sm"
 				name="cars" id="cars"
 			>
-				<option selected>Guiones</option>
+				<option selected disabled>Guiones</option>
 				<option value="">Si</option>
 				<option value="">No</option>
 			</select>
