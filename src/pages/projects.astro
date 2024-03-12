@@ -2,7 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import Nav from '@/components/Nav.astro'
 import Footer from '@/components/Footer.astro'
-import Socialnav from '@/components/Socialnav.astro'
+import Card from '@/components/Card.astro'
 import { theme } from '@/data/config.js'
 ---
 
@@ -10,28 +10,22 @@ import { theme } from '@/data/config.js'
 
 	<Nav page="projects"/>
 
-	<main>
+	<main class="space-y-12">
+
 		<h1 class={theme.h1}>Projects</h1>
 
-		<!-- Temporal List -->
-		<ul class="mt-12">
-			<li>
-				<a href="https://ai-album.art" target="_blank">AI-Album</a>
-			</li>
-			<li>
-				<a href="https://blacklist.morcxlla.xyz" target="_blank">Blacklist</a>
-			</li>
-		</ul>
+		<section class="grid grid-cols-2 gap-2">
 
+			<Card title="AI Album" img="https://www.ai-album.art/content/img/13.jpg" href="https://ai-album.art">
+			</Card>
+
+			<Card title="Blacklist" img="" href="https://blacklist.morcxlla.xyz"> 
+			</Card>
+
+		</section>
 
 	</main>
 
 	<Footer/>
 
 </Layout>
-
-<style>
-	a {
-		@apply text-emerald-600 font-medium hover:underline ;
-	}
-</style>
