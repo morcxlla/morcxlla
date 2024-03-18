@@ -8,18 +8,16 @@ import { config, theme } from '@/data/config.js'
 
 <Layout title="Home">
 
+	<Nav page="home"/>
 
-	<Nav page="home">
+	<main>
+		
+		<h1 class={theme.h1}>Morcxlla</h1>
 		<p class="hover:underline select-text">
 			<a href={`mailto:${config.mail}`}>
 				{config.mail}
 			</a>
 		</p>
-	</Nav>
-
-	<main>
-		
-		<h1 class={theme.h1}>Morcxlla</h1>
 		<p class="max-w-[70ch]">
 
 		</p>
