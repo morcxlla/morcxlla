@@ -14,7 +14,9 @@ const { title, img, attributes, href } = Astro.props;
 			${img && `background-image: url('${img}')`}
 			`}
 		href={href} target="_blank"
-		>
+		title={title}
+	>
+
 		<h3 class="text-xl font-extrabold group-hover:translate-y-1 group-hover:translate-x-1 transition duration-400">
 			{title}
 		</h3>
