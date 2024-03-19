@@ -3,18 +3,20 @@ interface Props {
 	title: string;
 	img?: string;
 	attributes?:string;
-	href: string;
+	href?: string;
 }
 
 const { title, img, attributes, href } = Astro.props;
 ---
-<a class={`group flex items-center justify-center rounded-xl aspect-video bg-cover bg-center shadow-xl ${attributes}`}
-	style={`
-		${img && `background-image: url('${img}')`}
-	`}
-	href={href} target="_blank"
->
-	<h3 class="text-xl font-extrabold group-hover:translate-y-1 group-hover:translate-x-1 transition duration-400">
-		{title}
-	</h3>
-</a>
+<article>
+	<a class={`group flex items-center justify-center rounded-xl aspect-video bg-cover bg-center shadow-xl ${attributes}`}
+		style={`
+			${img && `background-image: url('${img}')`}
+			`}
+		href={href} target="_blank"
+		>
+		<h3 class="text-xl font-extrabold group-hover:translate-y-1 group-hover:translate-x-1 transition duration-400">
+			{title}
+		</h3>
+	</a>
+</article>
